@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to right,#041308,#0b3317);
+
+}
+
+.left-text{
+    flex-basis: 30%;
+    text-shadow: 0 0 10px #333;
+}
+.left-text h1{
+    font-size: 3rem;
+    color :white;
+    text-align: center;
+}
+.left-text p{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 12px;
+}
+.right-gallery{
+
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 120px;
+    gap: 8px;
+
+}
+.box{
+    background-size: cover;
+    background-position: top;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 20px black;
+    background-color:#3f3f3f;
+    background-blend-mode:hard-light;
+    transition: all 0.8s ease-in-out;
+
+}
+.box:hover{
+    background-position: center;
+    background-color: #999;
+    box-shadow: 0 0 5px white;
+    text-shadow: none;
+
+}
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+
+
+/* media-query */
+@media screen and (max-width:1024px) {
+    .container{
+        flex-direction: column;
+
+    }
+    .left-text{
+        margin-top: 30px;
+        max-width: 80vw;
+        padding: 30px;
+    }
+    .right-gallery{
+        margin-top: 30px;
+        width: 100%;
+        grid-auto-rows:250px;
+        padding: 50px;
+
+    }
+    .box{
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+    
+}
